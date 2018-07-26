@@ -6,7 +6,7 @@ required_plugins.each do |plugin|
 end
 Vagrant.configure("2") do |config|
   config.vm.box = "ampath"
-  config.vm.box_url = "file:////home/achachiez/Code/Vagrant/Boxes/ampathDevBox.box"
+  config.vm.box_url = "http://10.50.80.115:9091/ampath/ampathDevBox.box"
   config.env.enable # Enable vagrant-env(.env)
   #config.vm.box_version = ".+"
   config.vm.synced_folder ENV['WORKSPACE_DIR'], "/home/vagrant/workspace" , create: true
